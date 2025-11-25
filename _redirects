@@ -1,0 +1,8 @@
+# Redirects for clean URLs
+/start-here    /start-here.html    200
+/glass-box     /glass-box.html     200
+/terminology   /terminology.html   200
+/resources     /resources.html     200
+
+# 404 fallback
+/*    /index.html   404
