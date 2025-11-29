@@ -1,0 +1,514 @@
+/* ===================================
+   26 LAWS - MODERN DESIGN SYSTEM
+   =================================== */
+
+/* Laws Hero Section */
+.laws-hero {
+    background: linear-gradient(135deg, 
+        rgba(102, 126, 234, 0.05) 0%, 
+        rgba(118, 75, 162, 0.05) 50%,
+        rgba(255, 107, 53, 0.05) 100%);
+    padding: 6rem 0 4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.laws-main-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.laws-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.laws-intro {
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+.laws-guidance {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+/* Progress Navigation */
+.laws-progress-nav {
+    background: var(--bg-secondary);
+    border-bottom: 2px solid var(--border);
+    padding: 1rem 0;
+    z-index: 100;
+}
+
+.laws-progress-nav.sticky-nav {
+    position: sticky;
+    top: 72px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.season-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.season-nav-item {
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: var(--glass);
+    border: 2px solid var(--glass-border);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.season-nav-item:hover {
+    background: rgba(255, 107, 53, 0.1);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.2);
+}
+
+.season-nav-item.active {
+    background: rgba(255, 107, 53, 0.15);
+    border-color: var(--accent);
+}
+
+.season-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+}
+
+.season-name {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Main Content */
+.laws-content {
+    padding: 4rem 0;
+    background: var(--bg-primary);
+}
+
+/* Season Section */
+.season-section {
+    margin-bottom: 6rem;
+    scroll-margin-top: 150px;
+}
+
+.season-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid var(--accent);
+}
+
+.season-number-large {
+    font-size: 6rem;
+    font-weight: 900;
+    color: var(--accent);
+    opacity: 0.3;
+    line-height: 1;
+    font-family: 'Crimson Text', serif;
+}
+
+.season-header-content {
+    flex: 1;
+}
+
+.season-title {
+    font-size: 2.5rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.season-description {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin: 0;
+    font-style: italic;
+}
+
+.season-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    background: var(--glass);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.season-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Law Card */
+.law-card {
+    background: var(--glass);
+    border: 2px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.law-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.05), transparent);
+    transition: left 0.6s ease;
+}
+
+.law-card:hover::before {
+    left: 100%;
+}
+
+.law-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 20px 60px rgba(255, 107, 53, 0.2);
+    transform: translateY(-5px);
+}
+
+.law-header {
+    margin-bottom: 1.5rem;
+}
+
+.law-number-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg-primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.law-title {
+    font-size: 2rem;
+    margin: 0;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.law-quote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--accent);
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+    border-left: 4px solid var(--accent);
+    background: none;
+}
+
+.law-quote::before {
+    display: none;
+}
+
+/* Law Sections */
+.law-section {
+    margin: 2.5rem 0;
+}
+
+.law-section-title {
+    font-size: 1.4rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.law-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Insight Box */
+.law-insight-box {
+    background: rgba(255, 107, 53, 0.05);
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.insight-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: var(--glass);
+    border-radius: 8px;
+}
+
+.insight-item:last-child {
+    margin-bottom: 0;
+}
+
+.insight-item strong {
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Somatic List */
+.somatic-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.somatic-list li {
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.75rem;
+    background: var(--glass);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.somatic-list li::before {
+    content: '→';
+    position: absolute;
+    left: 1rem;
+    color: var(--accent);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.somatic-list li:hover {
+    background: rgba(255, 107, 53, 0.1);
+    transform: translateX(10px);
+}
+
+/* Application Section */
+.application-section {
+    background: linear-gradient(135deg, 
+        rgba(102, 126, 234, 0.05) 0%, 
+        rgba(118, 75, 162, 0.05) 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+.application-steps {
+    list-style: none;
+    counter-reset: step-counter;
+    padding: 0;
+    margin: 1.5rem 0 0 0;
+}
+
+.application-steps li {
+    counter-increment: step-counter;
+    position: relative;
+    padding: 1.5rem 1.5rem 1.5rem 4rem;
+    margin-bottom: 1rem;
+    background: var(--glass);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.application-steps li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.application-steps li:hover {
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateX(10px);
+}
+
+/* Laws Placeholder */
+.laws-placeholder {
+    padding: 3rem;
+    background: var(--glass);
+    border: 2px dashed var(--glass-border);
+    border-radius: 16px;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.placeholder-text {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.placeholder-note {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* CTA Section */
+.laws-cta-section {
+    margin-top: 6rem;
+    padding: 4rem 0;
+}
+
+.cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem;
+    background: linear-gradient(135deg, 
+        rgba(102, 126, 234, 0.1) 0%, 
+        rgba(255, 107, 53, 0.1) 100%);
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.cta-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.cta-card p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+/* Active Nav Link */
+.nav-links a.active {
+    border-bottom-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .laws-main-title {
+        font-size: 2.5rem;
+    }
+
+    .laws-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .laws-intro {
+        font-size: 1rem;
+    }
+
+    .season-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .season-number-large {
+        font-size: 4rem;
+    }
+
+    .season-title {
+        font-size: 2rem;
+    }
+
+    .season-nav {
+        flex-direction: column;
+    }
+
+    .season-nav-item {
+        width: 100%;
+    }
+
+    .law-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .law-title {
+        font-size: 1.5rem;
+    }
+
+    .law-quote {
+        font-size: 1.1rem;
+    }
+
+    .application-steps li {
+        padding-left: 3.5rem;
+    }
+
+    .application-steps li::before {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    .cta-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .cta-card h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Print Styles */
+@media print {
+    .main-nav,
+    .laws-progress-nav,
+    .laws-cta-section {
+        display: none;
+    }
+
+    .law-card {
+        page-break-inside: avoid;
+        border: 1px solid #333;
+    }
+}
