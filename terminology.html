@@ -3,148 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminology Guide - The Wounded Blueprint</title>
-    <meta name="description" content="A clinical glossary of terms related to Complex PTSD, trauma, and the nervous system. Plain language definitions for high-level concepts.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Glossary | The Wounded Blueprint</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --academic-navy: #1A2B44;
+            --paper-cream: #FDFCF8;
+            --ink-black: #1F1F1F;
+            --muted-gold: #B4975A;
+            --border-color: #D1CEC7;
+            --sidebar-width: 200px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--paper-cream);
+            color: var(--ink-black);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* --- SIDEBAR NAV --- */
+        .glossary-nav {
+            width: var(--sidebar-width);
+            background: white;
+            border-right: 1px solid var(--border-color);
+            padding: 40px 20px;
+            position: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #888;
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active { color: var(--muted-gold); font-weight: bold; }
+
+        /* --- MAIN CONTENT --- */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            padding: 80px 60px;
+            max-width: 900px;
+        }
+
+        .glossary-header {
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .glossary-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--academic-navy);
+        }
+
+        /* --- TERM ENTRIES --- */
+        .term-group { margin-bottom: 80px; }
+
+        .alpha-marker {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--muted-gold);
+            border-bottom: 2px solid var(--muted-gold);
+            display: inline-block;
+            margin-bottom: 30px;
+            width: 40px;
+        }
+
+        .term-entry {
+            margin-bottom: 40px;
+        }
+
+        .term-entry h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            color: var(--academic-navy);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .term-entry .pronunciation {
+            font-family: 'Courier Prime', monospace;
+            color: #888;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .definition {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .clinical-note {
+            background: #fff;
+            border-left: 3px solid var(--muted-gold);
+            padding: 15px 20px;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .glossary-nav { display: none; }
+            .main-content { margin-left: 0; padding: 40px 20px; }
+        }
+    </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="container">
-            <a href="index.html" class="logo">The Wounded Blueprint</a>
-            <ul class="nav-links">
-                <li><a href="start-here.html">Start Here</a></li>
-                <li><a href="glass-box.html">Glass Box</a></li>
-                <li><a href="the-26-laws.html">26 Laws</a></li>
-                <li><a href="terminology.html" class="active">Glossary</a></li>
-                <li><a href="the-evidence.html">The Evidence</a></li>
-                <li><a href="who-i-am.html">About</a></li>
-                <li><a href="resources.html">Resources</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <header class="page-header">
-        <div class="container">
-            <h1>The Clinical Glossary</h1>
-            <p class="tagline">The language of survival. Clean definitions for complex trauma, nervous system, and relational terms.</p>
-        </div>
-    </header>
+    <aside class="glossary-nav">
+        <a href="index.html" class="nav-link" style="color: var(--academic-navy); margin-bottom: 20px;">← BACK HOME</a>
+        <span class="nav-link active">A — F</span>
+        <a href="#G" class="nav-link">G — L</a>
+        <a href="#M" class="nav-link">M — R</a>
+        <a href="#S" class="nav-link">S — Z</a>
+    </aside>
 
-    <main class="content-container">
-        <div class="container terminology-guide">
-            
-            <h2>Core Concepts</h2>
-            
-            <dl class="term-list">
-                
-                <dt id="cptsd">Complex PTSD (C-PTSD)</dt>
-                <dd>
-                    <p>A response to chronic, long-term, interpersonal trauma (e.g., childhood abuse or neglect, domestic violence, human trafficking) where the victim could not escape. It includes all symptoms of PTSD (flashbacks, hyperarousal, avoidance) plus disturbances in **emotional regulation**, **self-concept** (shame, guilt), and **relationships** (trauma bonds, co-dependency).</p>
-                    <p class="source-note">Source: Dr. Judith Herman's work on Trauma and Recovery; WHO ICD-11.</p>
-                </dd>
+    <main class="main-content">
+        <header class="glossary-header">
+            <span class="nav-link mono" style="font-size: 0.7rem; color: var(--muted-gold);">REFERENCE VOL. 1.0</span>
+            <h1>Glossary of Terms</h1>
+            <p>Defining the vocabulary of complex trauma, systemic survival, and the 26 Laws.</p>
+        </header>
 
-                <dt id="nervous-system">The Nervous System</dt>
-                <dd>
-                    <p>The "hardware" of survival. A network of nerves and cells that transmit signals between your brain and body, primarily governing safety, threat detection, and response. Trauma is stored here—not just in memory—and healing is often a biological process of teaching this system that the threat is over.</p>
-                    <p class="source-note">Key Concepts: Polyvagal Theory, Neuroception.</p>
-                </dd>
+        <section class="term-group" id="A">
+            <div class="alpha-marker">A</div>
 
-                <dt id="neuroception">Neuroception</dt>
-                <dd>
-                    <p>The unconscious process, operating in the brainstem, by which the nervous system scans the environment for safety or threat, **bypassing conscious thought**. If you feel anxious for "no reason," your neuroception has picked up a subtle signal (a tone of voice, a facial expression, a background noise) and activated your threat response. Healing requires teaching the neuroception that past danger signals are no longer current threats.</p>
-                    <p class="source-note">Coined by Dr. Stephen Porges (Polyvagal Theory).</p>
-                </dd>
-
-                <dt id="window-of-tolerance">Window of Tolerance</dt>
-                <dd>
-                    <p>The optimal state of nervous system arousal where a person can function effectively, feel safe, regulate emotions, and connect with others. Trauma keeps the system pushed outside this window, forcing it into hyperarousal (fight/flight) or hypoarousal (freeze/dissociation).</p>
-                    <p class="source-note">Coined by Dr. Daniel Siegel.</p>
-                </dd>
-
-                <dt id="somatic-symptoms">Somatic Symptoms / Somatic Memory</dt>
-                <dd>
-                    <p>Physical manifestations of trauma, where the body holds the "score" that the mind often dissociates from. This includes chronic pain, IBS, fibromyalgia, migraines, and muscle tension that do not respond to traditional medical treatment because the root is unprocessed, trapped survival energy.</p>
-                    <p class="source-note">Key Concepts: Dr. Bessel van der Kolk, Dr. Peter Levine.</p>
-                </dd>
-
-            </dl>
-
-            <h2>Survival Responses & Dysregulation</h2>
-
-            <dl class="term-list">
-                
-                <dt id="hyperarousal">Hyperarousal (Fight/Flight)</dt>
-                <dd>
-                    <p>A state where the sympathetic nervous system is highly activated, ready for immediate action. It manifests as chronic anxiety, hypervigilance, panic, insomnia, rage, and an addiction to high-stress, high-achievement environments (workaholism).</p>
-                </dd>
-
-                <dt id="hypoarousal">Hypoarousal (Freeze/Dissociation)</dt>
-                <dd>
-                    <p>A state of nervous system shutdown, governed by the Dorsal Vagal Complex, as a last-ditch attempt to survive overwhelming threat. It manifests as emotional numbness, brain fog, depression, physical fatigue, learned helplessness, and dissociation (fainting or depersonalization).</p>
-                </dd>
-
-                <dt id="fawn-response">Fawn Response</dt>
-                <dd>
-                    <p>A survival strategy where a person attempts to appease or align with the aggressor to prevent or escape conflict. This is often the root of co-dependency, people-pleasing, and the inability to set a boundary without over-explaining or apologizing.</p>
-                    <p class="source-note">Coined by trauma therapist Pete Walker.</p>
-                </dd>
-
-                <dt id="emotional-flashback">Emotional Flashback</dt>
-                <dd>
-                    <p>A term for experiencing the intense, unbearable feelings of a past trauma *without* the visual or narrative memory attached. It presents as sudden, inexplicable emotional dysregulation, shame spirals, or an overwhelming sense of doom that does not match the current reality.</p>
-                    <p class="source-note">Coined by trauma therapist Pete Walker.</p>
-                </dd>
-                
-                <dt id="emotional-dysregulation">Emotional Dysregulation</dt>
-                <dd>
-                    <p>The inability to modulate the intensity and duration of emotional responses. Emotions are experienced as overwhelming and feel uncontrollable, often leading to rapid, volatile shifts between intense anger, sadness, or emptiness. This is a core feature of C-PTSD and borderline personality organization.</p>
-                </dd>
-
-            </dl>
-
-            <h2>Relational & Attachment Terms</h2>
-
-            <dl class="term-list">
-
-                <dt id="trauma-bond">Trauma Bond</dt>
-                <dd>
-                    <p>An unhealthy attachment that develops in cycles of abuse, where the victim and abuser are tied together by intermittent reinforcement (cycles of intense connection/kindness followed by periods of threat/abuse). The intense relief after the threat is what strengthens the bond, leading the victim to confuse chemical arousal with love.</p>
-                </dd>
-
-                <dt id="betrayal-bond">Betrayal Bond</dt>
-                <dd>
-                    <p>A deeper form of trauma bond that forms when the person who is *supposed* to be your safe protector (a parent, partner, institution) is also the source of your harm. The attachment system prioritizes proximity to the caregiver for survival, forcing the brain to suppress the betrayal.</p>
-                    <p class="source-note">Coined by Dr. Patrick Carnes.</p>
-                </dd>
-                
-                <dt id="allostatic-load">Allostatic Load</dt>
-                <dd>
-                    <p>The cumulative wear-and-tear on the body systems resulting from chronic, repeated stress. It's the biological cost of constantly running on cortisol and adrenaline, contributing to chronic inflammation, autoimmune disorders, and early aging.</p>
-                </dd>
-                
-                <dt id="institutional-betrayal">Institutional Betrayal</dt>
-                <dd>
-                    <p>Harm that results from a failure of institutions (e.g., police, medical systems, universities, religious organizations) to prevent or respond supportively to trauma. This leads to **Learned Helplessness** and the rational decision to avoid seeking help from systems that repeatedly cause harm.</p>
-                    <p class="source-note">Coined by Dr. Jennifer Freyd.</p>
-                </dd>
-                
-                <dt id="titration">Titration</dt>
-                <dd>
-                    <p>In trauma healing, this refers to **dosing** the work. It is the process of gently re-introducing small, manageable amounts of traumatic memory or sensation, paired with grounding resources, to ensure the nervous system doesn't become overwhelmed. Healing is slow and small—never fast and big.</p>
-                    <p class="source-note">Key concept in Somatic Experiencing (Dr. Peter Levine).</p>
-                </dd>
-
-            </dl>
-
-            <div class="disclaimer-block">
-                <hr>
-                <p><strong>Crisis Support:</strong> 988 (U.S.) | International: <a href="http://findahelpline.com">findahelpline.com</a></p>
-                <p>This terminology guide is educational, not therapeutic. It is based on survivor testimony translated into structured frameworks, grounded in peer-reviewed research. It is not a substitute for professional mental health care.</p>
-                <p>© 2025 The Wounded Blueprint</p>
+            <div class="term-entry">
+                <h3>Adaptive Personality</h3>
+                <span class="pronunciation">/əˈdaptiv ˌpərsəˈnalitē/</span>
+                <p class="definition">A survival-based identity construct developed in response to prolonged trauma. Unlike a core personality, the adaptive personality prioritizes safety, camouflage, and the needs of the environment over authentic self-expression.</p>
+                <div class="clinical-note">
+                    Note: Often referred to in the course as "The Mask."
+                </div>
             </div>
 
-        </div>
+            <div class="term-entry">
+                <h3>Agency</h3>
+                <span class="pronunciation">/ˈājənsē/</span>
+                <p class="definition">The capacity of an individual to act independently and make free choices. In the context of C-PTSD, agency is often systematically dismantled by the traumatic environment.</p>
+            </div>
+        </section>
+
+        <section class="term-group" id="T">
+            <div class="alpha-marker">T</div>
+
+            <div class="term-entry">
+                <h3>Temporal Dysregulation</h3>
+                <span class="pronunciation">/ˈtemp(ə)rəl ˌdisˌreɡyəˈlāSHən/</span>
+                <p class="definition">The clinical phenomenon where the past (trauma) intrudes upon the present with the same sensory intensity as when it first occurred, making it difficult for the individual to perceive a distinct "future."</p>
+                <div class="clinical-note">
+                    See: Law 11 - The Now-Future Paradox.
+                </div>
+            </div>
+        </section>
+
     </main>
+
 </body>
 </html>
